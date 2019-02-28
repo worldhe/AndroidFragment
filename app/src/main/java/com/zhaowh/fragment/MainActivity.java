@@ -1,6 +1,8 @@
 package com.zhaowh.fragment;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -41,8 +43,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        //MenuInflater inflater = new MenuInflater(this);
-        //inflater.inflate(R.menu.main, menu);
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
@@ -64,5 +64,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void allToast(String content){
         Toast.makeText(this, content, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("系统通知");
+        builder.setIcon(R.mipmap.ic_launcher);
+        builder.setMessage("确定退出此应用吗？");
+        builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        });
+        builder.setNegativeButton("取消", null);
+        builder.create();
+        builder.show();
     }
 }
