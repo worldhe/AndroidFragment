@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent intent = null;
         switch (v.getId()){
             case R.id.btn1:
-
+                intent = new Intent(this, SecondActivity.class);
                 break;
             case R.id.btn2:
 
@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             default:
                 break;
         }
+        startActivity(intent);
     }
 
     @Override

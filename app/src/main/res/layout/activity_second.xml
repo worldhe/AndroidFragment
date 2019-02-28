@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFB6C1">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="我是SecondActivity界面"
+        android:gravity="center_horizontal"/>
+
+    <fragment
+        android:id="@+id/main_fragment"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:name="com.zhaowh.fragment.Fragment.MainFragment"/>
+</RelativeLayout>
