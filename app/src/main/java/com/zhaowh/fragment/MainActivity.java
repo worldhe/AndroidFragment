@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent = new Intent(this, SecondActivity.class);
                 break;
             case R.id.btn2:
-
+                intent = new Intent(this, ThirdActivity.class);
                 break;
             default:
                 break;

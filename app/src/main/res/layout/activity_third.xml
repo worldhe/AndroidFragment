@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFB6C1">
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="我是ThirdActivity界面"
+        android:gravity="center_horizontal"/>
+
+    <Button
+        android:id="@+id/btn_add"
+        style="@style/CommonThem"
+        android:text="动态加载新的fragment"
+        android:layout_below="@id/tv"
+        android:onClick="addFragment"/>
+
+    <Button
+        android:id="@+id/btn_remove"
+        style="@style/CommonThem"
+        android:text="动态移除fragment"
+        android:layout_below="@id/btn_add"
+        android:onClick="removeFragment"/>
+
+    <FrameLayout
+        android:id="@+id/second_fragment"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>
