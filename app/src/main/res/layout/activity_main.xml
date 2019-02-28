@@ -14,4 +14,9 @@
         style="@style/CommonThem"
         android:text="Fragment动态加载"/>
 
+    <Button
+        android:id="@+id/btn3"
+        style="@style/CommonThem"
+        android:text="Fragment传值"/>
+
 </LinearLayout>
